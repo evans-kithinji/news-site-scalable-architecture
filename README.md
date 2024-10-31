@@ -8,6 +8,7 @@ The solution emphasizes on scalability, security and high availability to ensure
 
 ## Current Prototype on Lightsail
 ![Alt Text](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/monolythicStructureEC2Lightsail.png?raw=true)
+
 Our initial setup was a straightforward monolithic architecture hosted on a single Lightsail instance, using a Bitnami WordPress stack:
 - Single instance setup: Combines web server, application logic, and database, accessible via a static public IP.
 - Limitations: Limited scalability, single point of failure, and restricted security configurations.
