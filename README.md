@@ -7,9 +7,13 @@ This repository reveals the design and planned implementation of a three-tier ar
 The solution emphasizes on scalability, security and high availability to ensure timely content delivery and robust protection against potential threats.
 
 ## Current Prototype on Lightsail
-![Alt Text](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/monolythicStructureEC2Lightsail.png?raw=true)
+![Current Prototype for Daily Scope News on Lightsail](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/monolythicStructureEC2Lightsail.png?raw=true)
 
 My initial setup was a straightforward monolithic architecture hosted on a single Lightsail instance, using a Bitnami WordPress stack:
 - Single instance setup: Combines web server, application logic, and database, accessible via a static public IP.
 - Limitations: Limited scalability, single point of failure, and restricted security configurations.
 While suitable for development, this monolithic setup is not ideal for scaling with future traffic and content demands.
+
+## DNS Records Configuration
+
+In addition to managing our A and WWW alias records, we also host our email services with Zoho. This requires the configuration of several additional DNS records, including MX (Mail Exchange) and TXT (Text) records. These records ensure proper email delivery and verification. The created email can be used later in configuring wordpress.
