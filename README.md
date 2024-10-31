@@ -49,6 +49,6 @@ Looking ahead, I plan to implement this architecture for Daily Scope News, a rap
 
 ## Acknowledgment
 This project is part of Challenge 1 of the CloudForceSky Weekly Challenges.
-![CloudForce Sky Weekly Challlenge One](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/CloudForceSky_Challenge_1.pdf)
+[CloudForce Sky Weekly Challlenge One](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/CloudForceSky_Challenge_1.pdf)
 
 I am grateful for the hands-on learning and guidance provided by CloudForceSky, enabling myself and others to design solutions for real-world scalability and security needs.
