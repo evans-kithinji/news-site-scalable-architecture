@@ -24,3 +24,31 @@ In addition to managing our A and WWW alias records, we also host our email serv
 ![Daily Scope News proposed AWS Architecture](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/threeTierArchitectureDailyNewsOnline.png?raw=true)
 
 The new multi-tier architecture is designed to overcome these challenges by decoupling components, allowing for independent scaling, and providing a highly secure environment. Below is a breakdown of the architecture:
+
+1. Content Delivery and DNS:
+   - Route 53 manages DNS, routing users to the nearest servers.
+   - CloudFront (CDN) caching static content (images, videos) across multiple edge locations to reduce latency.
+2. Storage:
+   - Amazon S3 stores static assets, offering seamless scalability for growing content volume. S3 is accessed only through CloudFront via Origin Access Control for enhanced security.
+3. Application Layer:
+   - EC2 Auto Scaling with Elastic Load Balancer (ELB) hosts the WordPress application, distributing traffic across instances in multiple Availability Zones for reliability and scalability.
+   - Private subnets house the application servers, restricting public internet access for added security.
+4. Database Layer:
+   - Amazon RDS (Relational Database Service) in a Multi-AZ configuration provides data redundancy and high availability.
+5. Network Security:
+   - AWS Network Firewall and NAT Instances in public subnets will manage inbound and outbound traffic to private subnets.
+   - AWS WAF to integrate with CloudFront to guard against web-based threats.
+  
+## Benefits of This Architecture
+- **Scalability**: Elasticity in the application layer and CloudFront’s caching ensure smooth handling of traffic spikes and content growth.
+- **High Availability**: Multi-AZ deployments for both application and database layers reduce the risk of downtime.
+- **Enhanced Security**: Private subnets, NAT gateways, and WAF protect the environment from unauthorized access and cyber threats.
+
+## Future Implementation: Daily Scope News Platform
+Looking ahead, I plan to implement this architecture for Daily Scope News, a rapidly growing news website that will serve a larger audience, including advertisers and content producers. This platform will rely on AWS’s robust infrastructure to deliver content securely and efficiently, regardless of spikes in demand or content expansion.
+
+## Acknowledgment
+This project is part of Challenge 1 of the CloudForceSky Weekly Challenges.
+![CloudForce Sky Weekly Challlenge One](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/CloudForceSky_Challenge_1.pdf)
+
+I am grateful for the hands-on learning and guidance provided by CloudForceSky, enabling myself and others to design solutions for real-world scalability and security needs.
