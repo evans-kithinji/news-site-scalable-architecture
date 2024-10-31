@@ -7,3 +7,4 @@ This repository reveals the design and planned implementation of a three-tier ar
 The solution emphasizes on scalability, security and high availability to ensure timely content delivery and robust protection against potential threats.
 
 ## Current Prototype on Lightsail
+![Alt Text](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/monolythicStructureEC2Lightsail.png?raw=true)
