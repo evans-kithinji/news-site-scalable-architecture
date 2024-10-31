@@ -15,5 +15,5 @@ My initial setup was a straightforward monolithic architecture hosted on a singl
 While suitable for development, this monolithic setup is not ideal for scaling with future traffic and content demands.
 
 ## DNS Records Configuration
-
+![Route 53 Daily Scope News initial configuration](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/route53Records.png?raw=true)
 In addition to managing our A and WWW alias records, we also host our email services with Zoho. This requires the configuration of several additional DNS records, including MX (Mail Exchange) and TXT (Text) records. These records ensure proper email delivery and verification. The created email can be used later in configuring wordpress.
