@@ -16,4 +16,11 @@ While suitable for development, this monolithic setup is not ideal for scaling w
 
 ## DNS Records Configuration
 ![Route 53 Daily Scope News initial configuration](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/route53Records.png?raw=true)
+
 In addition to managing our A and WWW alias records, we also host our email services with Zoho. This requires the configuration of several additional DNS records, including MX (Mail Exchange) and TXT (Text) records. These records ensure proper email delivery and verification. The created email can be used later in configuring wordpress.
+
+
+## Planned AWS Architecture
+![Daily Scope News proposed AWS Architecture](https://github.com/evans-kithinji/news-site-scalable-architecture/blob/main/threeTierArchitectureDailyNewsOnline.png?raw=true)
+
+The new multi-tier architecture is designed to overcome these challenges by decoupling components, allowing for independent scaling, and providing a highly secure environment. Below is a breakdown of the architecture:
